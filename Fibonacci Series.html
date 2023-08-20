@@ -1,0 +1,88 @@
+<!-- 
+Online HTML, CSS and JavaScript editor to run code online.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+  margin: 20px;
+  justify-content:center;
+  align-items:center;
+  display:flex;
+}
+
+div{
+  background:black;
+  height:250px;
+  width:300px;
+  justify-content:center;
+  align-items:center;
+  display:flex;
+  color:rgb(255, 255, 255);
+  border-radius:12%;
+  font-family:cursive;
+}
+
+#ip1{
+  width:100%;
+  border:none;
+  background:transparent;
+  outline:none;
+  color:white;
+  border-bottom:white 2px solid;
+  
+}
+
+#submit{
+  width:100%;
+  border:none;
+  background:transparent;
+  color:white;
+}
+
+  </style>
+  <title>Browser</title>
+</head>
+
+<body>
+  <div>
+  <form>
+
+    <h1>Fibonacci Series</h1>
+    <p>Input 1</p>
+    <input type="number" id="ip1" name="input" placeholder="Enter input">
+      <!--<p>Input 2</p>
+    <input type="number" id="ip2" name="input2" placeholder="Enter input">-->
+      <p src="script.js"></p>
+     <input type="button" value="submit" id="submit" onclick="validate()"> 
+      
+  </form>
+  </div>
+  <script>
+  b=0;c=1;
+function validate(){
+var a=document.getElementById("ip1").value;
+  if(a==""){
+  window.alert("Enter the input")
+
+  }
+  
+  else{
+   for(i=0;i<a;i++){
+    document.write(c)
+     var d=b+c;
+     b=c;
+     c=d;
+   }
+    return false
+  }
+  
+}
+  </script>
+</body>
+
+</html>
